@@ -4,7 +4,7 @@ ENV container=docker
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible yamllint"
+ENV pip_packages "ansible-core ansible-lint yamllint pynautobot jmespath netaddr"
 
 # Install requirements.
 RUN apt-get update \
