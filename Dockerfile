@@ -4,7 +4,7 @@ ENV container=docker
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible yamllint pynautobot pynetbox jmespath netaddr"
+ENV pip_packages "ansible==11.1.0 yamllint pynautobot pynetbox jmespath netaddr"
 
 # Install requirements.
 RUN apt-get update \
