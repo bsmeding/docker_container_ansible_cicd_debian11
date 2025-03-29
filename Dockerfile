@@ -4,7 +4,7 @@ ENV container=docker
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-ENV pip_packages "ansible==8.6.0 yamllint pynautobot pynetbox jmespath netaddr"
+ENV pip_packages "ansible==8.6.0 cryptography yamllint pynautobot pynetbox jmespath netaddr"
 
 # Install requirements.
 RUN apt-get update \
@@ -23,6 +23,7 @@ RUN apt-get update \
        python3-wheel \
        python3-apt \
        iproute2 \
+       dbus \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
