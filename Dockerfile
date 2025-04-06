@@ -23,7 +23,6 @@ RUN apt-get update \
        python3-wheel \
        python3-apt \
        iproute2 \
-       dbus \
     && rm -rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
