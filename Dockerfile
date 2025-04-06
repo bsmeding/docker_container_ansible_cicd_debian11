@@ -27,6 +27,12 @@ RUN apt-get update \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
 
+# Install Docker CLI and Python SDK
+RUN apt-get update && apt-get install -y \
+    docker.io \
+    python3-docker \
+    && rm -rf /var/lib/apt/lists/*
+
 # Set system python to Externally managed
 RUN rm -f /usr/lib/python3.11/EXTERNALLY-MANAGED
 
